@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry location="C:/Users/IBM_ADMIN/.m2/repository/mysql/mysql-connector-java/5.1.45/mysql-connector-java-5.1.45-sources.jar" />
+
+	<context id="DB2Tables" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/yile" userId="root"
+			password="ROOT">
+		</jdbcConnection>
+
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.yile.db.model"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="mapper.xml"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.yile.db.dao" targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+<!-- 
+		<table schema="postcardaction" tableName="postcardaction" domainObjectName="PostcardAction">
+			<property name="useActualColumnNames" value="true" />
+
+		</table>
+			<table schema="postcardcomment" tableName="postcardcomment" domainObjectName="PostcardComment">
+			<property name="useActualColumnNames" value="true" />
+
+		</table>
+
+
+		<table schema="postcardgenerate" tableName="postcardgenerate"
+			domainObjectName="PostcardGenerate">
+			<property name="useActualColumnNames" value="true" />
+			<generatedKey column="postCardId" sqlStatement="MySql"
+				identity="true"></generatedKey>
+
+
+		</table>
+ -->
+		<table schema="users" tableName="users" domainObjectName="Users">
+			<property name="useActualColumnNames" value="true" />
+					<generatedKey column="id" sqlStatement="MySql"
+				identity="true"></generatedKey>
+
+		</table>
+		<!-- 
+		<table schema="systemconfig" tableName="systemconfig" domainObjectName="Systemconfig">
+			<property name="useActualColumnNames" value="true" />
+
+		</table>
+		<table schema="region" tableName="region" domainObjectName="Region">
+			<property name="useActualColumnNames" value="true" />
+
+		</table>
+		<table schema="postcardattibute" tableName="postcardattibute" domainObjectName="PostcardAttibute">
+			<property name="useActualColumnNames" value="true" />
+
+		</table>
+		<table schema="orders" tableName="orders" domainObjectName="Order">
+			<property name="useActualColumnNames" value="true" />
+
+		</table>
+		<table schema="merchant" tableName="merchant" domainObjectName="Merchant">
+			<property name="useActualColumnNames" value="true" />
+
+		</table>
+		<table schema="postcardcoordinate" tableName="postcardcoordinate" domainObjectName="PostcardCoordinate">
+			<property name="useActualColumnNames" value="true" />
+					<generatedKey column="id" sqlStatement="MySql"
+				identity="true"></generatedKey>
+
+		</table>
+	    <table schema="postcardattention" tableName="postcardattention" domainObjectName="PostcardAttention">
+			<property name="useActualColumnNames" value="true" />
+
+		</table>
+ <table schema="postcardrecommendzt" tableName="postcardrecommendzt" domainObjectName="PostcardRecommendzt">
+			<property name="useActualColumnNames" value="true" />
+
+		</table>
+		 -->
+	</context>
+
+</generatorConfiguration>
