@@ -1,3 +1,0 @@
-run spring boot
-mvn install
-java -jar  target jar
